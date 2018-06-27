@@ -20,7 +20,7 @@ gems:   #   This is for installing Jekyll gems/plugins. Almost all plugins won't
 - jekyll-feed
 - jemoji
 permalink: pretty
-paginate: 1 #   This is for setting how many posts appear on each page.
+paginate: 8 #   This is for setting how many posts appear on each page.
 paginate_path: page:num
 
 #   Use this for when you're hosting a production branch.
