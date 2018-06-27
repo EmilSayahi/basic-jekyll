@@ -25,3 +25,19 @@ layout: default
     </div>
   </div>
 </article>
+<section id="content" class="body">    
+        <header> <h2 class="entry-title"><a href="{{ post.url }}" rel="bookmark" title="Permalink to {{ post.title}}">{{ post.title }}</a></h2> </header>
+        <footer class="post-info">
+                <abbr class="published" title="{{ post.date | date: "%a. %-d %B %Y" | downcase }}">
+                        {{ post.date | date: "%a. %-d %B %Y" | downcase }}
+                </abbr>
+                
+                <address class="vcard author">
+                        By <a class="url fn" href="#">{{ article.author }}</a>
+                </address>
+                
+        </footer>
+        <div class="entry-content">
+        {{ post.content }}
+        </div>
+</section>
