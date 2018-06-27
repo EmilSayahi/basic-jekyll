@@ -9,10 +9,10 @@ layout: index
 <div class="post-list">
 
     {% for post in paginator.posts reversed %}
-    <div class="content">
-	<pre>{{ forloop.index | append: "." }}</pre>
+    <div class="content">	
         <li>
 		<h2>
+		<li class="p_num">{{ forloop.index | append: "." }}</li>
             <a class="active"
                href="{{ post.url | prepend: site.baseurl }}">
                 {{ post.title }}
