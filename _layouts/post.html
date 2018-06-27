@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section id="content" class="body">    
-        <header> <h2 class="entry-title"><a href="{{ page.url }}" rel="bookmark" title="Permalink to {{ page.title}}">{{ page.title }}</a></h2> </header>
+        <header> <h2 class="entry-title"><a href="{{ page.url | prepend: site.baseurl }}" rel="bookmark" title="Permalink to {{ page.title}}">{{ page.title }}</a></h2> </header>
         <footer class="post-info">
                 <abbr class="published" title="{{ page.date | date: "%a. %-d %B %Y" | downcase }}">
                         {{ page.date | date: "%a. %-d %B %Y" | downcase }}
