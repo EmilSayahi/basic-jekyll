@@ -10,25 +10,13 @@ layout: default
     <center><h2>
       <a class="post-link"
          href="{{ page.url | prepend: site.baseurl }}">
-        		    {% if site.post_title_rendered == true %}
+        		    
                 {{ page.title }}
-		    {% endif %}
-		    {% if site.post_title_rendered == false %}
-
-{% endif %}
       </a>
     </h2>
 </center>
     <div class="post-content">
       {{ page.content }}
-    </div>
-    <div class="tags">
-      {% if page.tags != empty %}
-      <i class="icon-tags icon-large"></i>
-      {% for tag in page.tags%}
-      {{tag}}
-      {%endfor%}
-      {%endif%}
     </div>
     <div class="post-meta">
       <div class="post-meta-data">
