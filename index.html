@@ -10,7 +10,7 @@ layout: index
 
     {% for post in paginator.posts reversed %}
     <div class="content">
-	{{ forloop.index | append: "." }}
+	<pre>{{ forloop.index | append: "." }}</pre>
         <li>
 		<h2>
             <a class="active"
