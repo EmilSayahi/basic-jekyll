@@ -11,11 +11,8 @@ layout: index
     <div class="content">
         <li>
             <a class="active"
-               href="#">
-		    {% if site.post_title_rendered == true %}
+               href="{{ post.url | prepend: site.baseurl }}">
                 {{ post.title }}
-		    {% endif %}
-		    {% if site.post_title_rendered == false %}
 
 {% endif %}
             </a>
@@ -35,41 +32,5 @@ layout: index
     </div>
     {% endfor %}
 </div>
-
-<div id="pagination">
-    <div class="pagenavi">
-        {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-        <a href="{{ site.baseurl }}/" class="current">
-		
-            <i class="icon-chevron-left"></i>
-
-        </a>
-        {% else %}
-        <a href="{{ site.baseurl }}/page{{paginator.previous_page}}">
-            		
-            <i class="icon-chevron-left"></i>
-
-        </a>
-        {% endif %}
-        {% else %}
-        		
-<span> <i class="icon-chevron-left"></i></span>
-
-        {% endif %}
-        {% for count in (2..paginator.total_pages) limit:8 %}
-        {% if count == paginator.page %}
-        <span class="current-page">{{count}}</span>
-        {% else %}
-        <a href="{{ site.baseurl }}/page{{count}}">{{count}}</a>
-        {% endif %}
-        {% endfor %}
-
-        {% if paginator.next_page %}
-        <a href="{{ site.baseurl }}/page{{paginator.next_page}}">
-            <i class="icon-chevron-right"></i>
-        {% endif %}
-
-    </div>
 </div>
 		
