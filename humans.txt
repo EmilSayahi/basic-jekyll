@@ -1,6 +1,6 @@
 ﻿/* PEOPLE */
 
-	'Basic' Developers: nicoddemus, eike2013, & Skami18
+	'Basic' Developers: Alexis Métaireau, nicoddemus, eike2013, & Skami18
 	GitHub: https://github.com/getpelican/pelican-themes/tree/master/basic
 	
 	Developer: Emil Sayahi

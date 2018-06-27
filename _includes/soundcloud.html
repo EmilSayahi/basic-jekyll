@@ -1,0 +1,28 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+		var id = '{{ include.id }}'
+		var scslsh = encodeURI(id);
+        var scurl = 'https://noembed.com/embed?url=' + id
+        $.getJSON(scurl, function(result){
+            $.each(result, function(i, field){
+                $("sc").html(field);
+                if(i == 'html'){
+                return false;
+                }
+            });
+        });
+//$("div").prepend(scurl);
+});
+</script>
+</head>
+<body>
+
+
+
+<sc></sc>
+
+</body>
+</html>

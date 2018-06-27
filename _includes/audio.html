@@ -1,0 +1,56 @@
+<!-- Uses the plyr.io HTML5 player -->
+<script src="https://cdn.plyr.io/2.0.15/plyr.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/2.0.15/plyr.css">
+<script>
+document.addEventListener('DOMContentLoaded', () => { 
+  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+  const player = new Plyr('#audio');
+
+  // Bind event listener
+  function on(selector, type, callback) {
+    document.querySelector(selector).addEventListener(type, callback, false);
+  }
+
+  // Play
+  on('.js-play', 'click', () => { 
+    player.play();
+  });
+
+  // Pause
+  on('.js-pause', 'click', () => { 
+    player.pause();
+  });
+
+  // Stop
+  on('.js-stop', 'click', () => { 
+    player.stop();
+  });
+
+  // Rewind
+  on('.js-rewind', 'click', () => { 
+    player.rewind();
+  });
+
+  // Forward
+  on('.js-forward', 'click', () => { 
+    player.forward();
+  });
+});
+plyr.setup("#audio");
+</script>
+<style>
+  .container {
+  max-width: 430px;
+  max-height: 315px;
+  }
+  #audio {
+  max-width: 430px;
+  max-height: 315px;
+  }
+</style>
+<div class="audio">
+<audio id="audio" controls>
+    <source src="{{ include.audio-mp3 }}" type="audio/mp3">
+    <source src="{{ include.audio-ogg }}" type="audio/ogg">
+</audio>
+</div>
