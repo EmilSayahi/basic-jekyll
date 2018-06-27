@@ -16,20 +16,18 @@ layout: index
 
             </a>
         </li>
-		
+		        <div class="post-meta">
+            <div class="post-meta-data">
+                
+                {{ post.date | "%a. %-d %B %Y" }}
+            </div>
+        </div>
+		<p><i>By {{ site.author }}</i></p>
         <div class="post-content">
             {{ post.content }}
         </div>
 
         </div>
-        <div class="post-meta">
-            <div class="post-meta-data">
-                
-                {{ post.date | "%a. %-d %B %Y" | downcase }}
-            </div>
-        </div>
     </div>
     {% endfor %}
-</div>
-</div>
 		
