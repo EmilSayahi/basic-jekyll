@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+        <header id="banner" class="body">
+                <h1><a href="{{ site.url | prepend: site.baseurl }}">{{ site.title }} <strong>{{ site.tagline }}</strong></a></h1>
+</header>
+<div class="home">
+<script src="{{ site.url | prepend: site.baseurl }}/js/infinite-jekyll.js"></script>
+    
+
+    <div class="menu">
+
+                {{ content }}
+				<div class="infinite-spinner"></div>
+    </div>
+</div>
+
+</body>
+
+</html>

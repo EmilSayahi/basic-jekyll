@@ -1,0 +1,75 @@
+---
+layout: index
+---
+<!-- fulltitle: This overrides the default page title, which is "{{page.title}} | {{site.title}}" -->
+<!-- excerpt: If this isn't set, it'll pull your {{site.tagline}} for meta description-->
+{% if site.demo_mode == true %}
+<a class="gh-promo" href="https://github.com/EmilSayahi/basic-jekyll/"><img class="gh-promo_img" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+{% endif %}
+<div class="post-list">
+    {% for post in paginator.posts %}
+    <div class="content">
+        <li>
+            <a class="active"
+               href="{{ post.url | prepend: site.baseurl }}">
+		    {% if site.post_title_rendered == true %}
+                {{ post.title }}
+		    {% endif %}
+		    {% if site.post_title_rendered == false %}
+
+{% endif %}
+            </a>
+        </li>
+		
+        <div class="post-content">
+            {{ post.content }}
+        </div>
+
+        </div>
+        <div class="post-meta">
+            <div class="post-meta-data">
+                
+                {{ post.date | "%a. %-d %B %Y" | downcase }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div id="pagination">
+    <div class="pagenavi">
+        {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+        <a href="{{ site.baseurl }}/" class="current">
+		
+            <i class="icon-chevron-left"></i>
+
+        </a>
+        {% else %}
+        <a href="{{ site.baseurl }}/page{{paginator.previous_page}}">
+            		
+            <i class="icon-chevron-left"></i>
+
+        </a>
+        {% endif %}
+        {% else %}
+        		
+<span> <i class="icon-chevron-left"></i></span>
+
+        {% endif %}
+        {% for count in (2..paginator.total_pages) limit:8 %}
+        {% if count == paginator.page %}
+        <span class="current-page">{{count}}</span>
+        {% else %}
+        <a href="{{ site.baseurl }}/page{{count}}">{{count}}</a>
+        {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+        <a href="{{ site.baseurl }}/page{{paginator.next_page}}">
+            <i class="icon-chevron-right"></i>
+        {% endif %}
+
+    </div>
+</div>
+		

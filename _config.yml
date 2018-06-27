@@ -1,0 +1,30 @@
+# Site settings
+title: Basic Theme    #    Your site's name.
+timezone: America/New_York  #   Input your timezone. A list of timezones is at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones . Input whatever is in the 'TZ*' tab of the list.
+tagline: "Pelican's 'basic' theme, ported to Jekyll"   #    Your site's tagline.
+url: "http://emilsayahi.github.io/SketchSpace/" # The base hostname & protocol for your site. Your URL.
+author: Your Name   #   Your name.
+demo_mode: true  # Meant for use on the demo site only. Disable this.
+
+#Jekyll settings
+collections:
+  posts:
+    title: posts
+    output: true
+baseurl: "/basic-jekyll" #   If you're not hosting in a folder, set this to blank. If not, put the FOLDER ONLY into the baseurl field. Example: "/blog"
+markdown: kramdown
+gems:   #   This is for installing Jekyll gems/plugins. Almost all plugins won't work on GitHub Pages (meanwhile GitLab Pages doesn't limit you), so only use this for self hosting or GitLab Pages/some other service. If you use GitHub Pages, check this page of the allowed plugins: https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-seo-tag
+- jekyll-feed
+- jemoji
+permalink: pretty
+paginate: 1 #   This is for setting how many posts appear on each page.
+paginate_path: page:num
+
+#   Use this for when you're hosting a production branch.
+#sass:
+#    style: compressed
+
+exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]

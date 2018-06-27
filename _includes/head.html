@@ -1,0 +1,30 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link href="{{ site.url | prepend: site.baseurl }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} ATOM Feed" />
+
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+	<!-- Plain Description -->
+	<title>{{ site.title }}</title>
+	<meta name="description" content="{{ site.tagline }}">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="{{ "/css/basic.css" | prepend: site.baseurl }}"></link>
+	{% seo %}
+	{% feed_meta %}
+</head>

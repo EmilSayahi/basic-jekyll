@@ -1,0 +1,16 @@
+﻿/* PEOPLE */
+
+	'Basic' Developers: nicoddemus, eike2013, & Skami18
+	GitHub: https://github.com/getpelican/pelican-themes/tree/master/basic
+	
+	Developer: Emil Sayahi
+	Contact: em [at] emsa.cf
+	Twitter: emilsayahi
+	GitHub: https://github.com/ByEmilSayahi
+	Location: Cincinnati, OH
+
+/* SITE */
+	Last update:2018/06/27 #YYYY-MM-DD
+	Language:  English
+	Doctype:HTML5
+	Programs: Notepad++, GitHub Desktop
