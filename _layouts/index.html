@@ -3,21 +3,19 @@
 
 {% include head.html %}
 
-<body>
+<body id="index" class="home">
         <header id="banner" class="body">
                 <h1><a href="{{ site.url | prepend: site.baseurl }}">{{ site.title }} </a></h1>
 				<h2><strong>{{ site.tagline }}</strong></h2>
 </header>
-<div class="home">
 <script src="{{ site.url | prepend: site.baseurl }}/js/infinite-jekyll.js"></script>
     
 
-    <div class="menu">
+    <nav id="menu"><ul>
 
                 {{ content }}
 				<div class="infinite-spinner"></div>
-    </div>
-</div>
+    </ul></nav>
 
 </body>
 
