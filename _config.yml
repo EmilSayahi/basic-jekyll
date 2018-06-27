@@ -2,7 +2,7 @@
 title: Basic Theme    #    Your site's name.
 timezone: America/New_York  #   Input your timezone. A list of timezones is at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones . Input whatever is in the 'TZ*' tab of the list.
 tagline: "Pelican's 'basic' theme, ported to Jekyll"   #    Your site's tagline.
-url: "http://emilsayahi.github.io/SketchSpace/" # The base hostname & protocol for your site. Your URL.
+url: "http://emilsayahi.github.io/basic-jekyll/" # The base hostname & protocol for your site. Your URL.
 author: Your Name   #   Your name.
 demo_mode: true  # Meant for use on the demo site only. Disable this.
 
