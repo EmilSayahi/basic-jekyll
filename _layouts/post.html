@@ -32,12 +32,8 @@ layout: default
     </div>
     <div class="post-meta">
       <div class="post-meta-data">
-        <i class="icon-pencil icon-large"></i>
-        {{ page.date | date: "%b %-d, %Y" }}
+        {{ post.date | "%a. %-d %B %Y" | downcase }}
       </div>
     </div>
   </div>
-  {% if site.comments == true %}
-  {% include disqus.html %}
-  {% endif %}
 </article>
