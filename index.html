@@ -7,8 +7,10 @@ layout: index
 <a class="gh-promo" href="https://github.com/EmilSayahi/basic-jekyll/"><img class="gh-promo_img" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 {% endif %}
 <div class="post-list">
+<h1>All articles</h1>
     {% for post in paginator.posts reversed %}
     <div class="content">
+	{{ forloop.index }}
         <li>
             <a class="active"
                href="{{ post.url | prepend: site.baseurl }}">
