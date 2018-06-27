@@ -26,7 +26,7 @@ layout: index
                 <u>{{ post.date | date: "%a. %-d %B %Y" | downcase }}</u>
             </div>
         </div>
-		<a href="{{ site.baseurl }}/index.html"><i>By {{ site.author }}</i></a>
+		<i>By <a href="{{ site.baseurl }}/index.html">{{ site.author }}</i></a>
         <div class="post-content">
             {{ post.content }}
         </div>
