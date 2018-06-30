@@ -5,22 +5,12 @@ layout: default
 <article class="post">
 
   <div class="content">
-    <h2>
-      <a class="post-link"
-         href="{{ page.url | prepend: site.baseurl }}">
+    <h1>
         {{ page.title }}
-      </a>
-    </h2>
+    </h1>
 
     <div class="post-content">
       {{ page.content }}
-    </div>
-
-    <div class="post-meta">
-      <div class="post-meta-data">
-        <!-- <i class="icon-pencil icon-large"></i> -->
-        {{ page.date | date: "%b %-d, %Y" }}
-      </div>
     </div>
   </div>
 
