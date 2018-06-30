@@ -5,6 +5,6 @@ This was replicated from a single screenshot and the code in the themes repo. In
 
 Tags, categories, and the author page are intentionally left out. The page numbers were eyeballed as well, and of course the original post syntax of Pelican does not work here.
 
-If you're going to really use this, I've left some neat embed includes in that I made.
+If you're going to really use this, I've left some neat embed includes in that I made. Also, keep in mind that multiple pages' HTML structures aren't like the original Pelican theme. It looks and works like the Pelican theme, but many things meant to work with Pelican themes won't work with this.
 
 If you run into issues, then do some Googling on your own. I don't plan on supporting this, and I'm not willing to help you troubleshoot.
