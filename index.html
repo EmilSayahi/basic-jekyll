@@ -21,12 +21,11 @@ layout: index
 		</h2>
         </li>
 		        <div class="post-meta">
-            <div class="post-meta-data">
+            <div class="date">
                 
-                <p class="date">{{ post.date | date: "%a. %-d %B %Y" | downcase }}
+                <p>{{ post.date | date: "%a. %-d %B %Y" | downcase }}
 			<br>
-		    </p>
-		    <i>By <a href="#">{{ site.author }}</i></a>
+			<i>By <a href="#">{{ site.author }}</i></a>
 		    </p>
             </div>
         </div>
