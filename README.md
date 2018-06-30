@@ -1,5 +1,5 @@
 # Basic-Jekyll
-A port of ['Basic'](https://github.com/getpelican/pelican-themes/tree/master/basic), a theme for [Pelican](http://getpelican.com/) to [Jekyll](https://jekyllrb.com/).
+A port of ['Basic'](https://github.com/getpelican/pelican-themes/tree/master/basic), a theme for [Pelican](http://getpelican.com/), to [Jekyll](https://jekyllrb.com/).
 
 This was replicated from a single screenshot and the code in the themes repo. Inaccuracies from the original are to be expected, because I'm not willing to put enough effort into this to justify actually setting up and running an instance of Pelican so I can reverse engineer every last detail.
 
