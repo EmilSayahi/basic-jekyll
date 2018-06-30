@@ -1,7 +1,7 @@
 ---
 title: This is a test page
 permalink: "/test_page/"
-layout: page
+layout: post
 ---
 
 
