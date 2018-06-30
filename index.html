@@ -23,10 +23,14 @@ layout: index
 		        <div class="post-meta">
             <div class="post-meta-data">
                 
-                <p class="date">{{ post.date | date: "%a. %-d %B %Y" | downcase }}</p>
+                <p class="date">{{ post.date | date: "%a. %-d %B %Y" | downcase }}
+			<br>
+		    </p>
+		    <i>By <a href="#">{{ site.author }}</i></a>
+		    </p>
             </div>
         </div>
-		<i>By <a href="#">{{ site.author }}</i></a>
+		
         <div class="post-content">
             {{ post.content }}
         </div>
