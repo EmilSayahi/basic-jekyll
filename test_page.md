@@ -1,6 +1,6 @@
 ---
 title: This is a test page
-permalink: "/test_page/"
+date: 2011-04-20 10:00:00
 layout: page
 ---
 
