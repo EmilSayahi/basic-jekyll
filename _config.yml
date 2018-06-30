@@ -11,6 +11,9 @@ collections:
   posts:
     title: posts
     output: true
+  pages:
+    title: pages
+    output: true
 baseurl: "/basic-jekyll" #   If you're not hosting in a folder, set this to blank. If not, put the FOLDER ONLY into the baseurl field. Example: "/blog"
 markdown: kramdown
 gems:   #   This is for installing Jekyll gems/plugins. Almost all plugins won't work on GitHub Pages (meanwhile GitLab Pages doesn't limit you), so only use this for self hosting or GitLab Pages/some other service. If you use GitHub Pages, check this page of the allowed plugins: https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
