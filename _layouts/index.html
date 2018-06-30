@@ -7,7 +7,13 @@
         <header id="banner" class="body">
                 <h1><a href="{{ site.baseurl }}/index.html">{{ site.title }} </a></h1>
 				<nav id="menu"><ul>
-				<strong><a href="#">{{ site.tagline }}</a></strong>
+				<strong>
+					{% for my_page in site.pages %}
+					{% if my_page.title %}
+					<a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+            				{% endif %}
+            				{% endfor %}
+				</strong>
 				</ul></nav>
 </header>
 <script src="{{ site.url | prepend: site.baseurl }}/js/infinite-jekyll.js"></script>
