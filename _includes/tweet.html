@@ -2,13 +2,25 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+	function randomString(len, charSet) {
+	    charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	    var randomString = '';
+	    for (var i = 0; i < len; i++) {
+		var randomPoz = Math.floor(Math.random() * charSet.length);
+		randomString += charSet.substring(randomPoz,randomPoz+1);
+	    }
+	    return randomString;
+	}
 $(document).ready(function(){
+	var elemName = randomString(5);
+	//$("{{ include.id | url_encode | escape | remove: "%" | remove: "." | strip }}").prepend("<" + elemName + "></" + elemName + ">");
+
 		var id = '{{ include.id }}'
 		var twtslsh = encodeURI(id);
         var twturl = 'https://noembed.com/embed?url=' + twtslsh + '.json'
         $.getJSON(twturl, function(result){
             $.each(result, function(i, field){
-                $("twt").html(field);
+                $('{{ include.id | url_encode | escape | remove: "%" | remove: "." | strip }}').html(field);
                 if(i == 'html'){
                 return false;
                 }
@@ -22,7 +34,7 @@ $(document).ready(function(){
 
 
 
-<twt></twt>
+<{{ include.id | url_encode | escape | remove: "%" | remove: "." | strip }}></{{ include.id | url_encode | escape | remove: "%" | remove: "." | strip }}>
 
 </body>
 </html>

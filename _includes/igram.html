@@ -1,0 +1,39 @@
+<!--
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+		var id = '{{ page.mf-syndication | remove: "www." | remove: '"]' | remove: '["' }}'
+		var gramslsh = encodeURI(id);
+        var gramurl = 'https://noembed.com/embed?url=' + gramslsh //+ '.json'
+        $.getJSON(gramurl, function(result){
+            $.each(result, function(i, field){
+                $("gram").html(field);
+                if(i == 'html'){
+                return false;
+                }
+            });
+        });
+//$("div").prepend(gramurl);
+});
+</script>
+</head>
+<body>
+
+
+
+<gram></gram>
+
+</body>
+</html>
+-->
+<head>
+    	<link rel="stylesheet" href="https://cssgram-cssgram.netdna-ssl.com/cssgram.min.css"> 
+	<script src="https://liech.ga/assets/iframeResizer.min.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<script>
+	document.getElementById('html').innerHTML='<iframe id="igram" src="{{ page.mf-syndication | remove: "www." | remove: '"]' | remove: '["' | append: "embed" }}" style="position:relative; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" frameborder="0" scrolling="no"></iframe>';
+	iFrameResize({log:true,autoResize:true,sizeWidth:true,interval:16,heightCalculationMethod:'grow'}, '#igram');
+</script>

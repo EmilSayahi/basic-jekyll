@@ -1,0 +1,11 @@
+<div class="">
+  {% if include.type == "embed" %}
+    <iframe src="https://www.vrddit.com/?e={{ include.id }}" style="width: 100%; height: 520px;border-radius:3px;" allowfullscreen></iframe>
+  {% else %}
+    <iframe src="https://www.vrddit.com/?v={{ include.id }}" style="width: 100%; height: 520px;border-radius:3px;" allowfullscreen></iframe>
+  {% endif %}
+</div>
+<blockquote class="reddit-card" data-card-preview="0">
+<a href="{{ include.url }}?ref=share&ref_source=embed">{{ include.name }}</a>
+</blockquote>
+<script async src="//embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>

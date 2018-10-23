@@ -8,7 +8,7 @@ $(document).ready(function(){
         var scurl = 'https://noembed.com/embed?url=' + id
         $.getJSON(scurl, function(result){
             $.each(result, function(i, field){
-                $("sc").html(field);
+                $('{{ include.id | url_encode | escape | remove: "%" | remove: "." | strip }}').html(field);
                 if(i == 'html'){
                 return false;
                 }
@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 
 
-<sc></sc>
+<{{ include.id | url_encode | escape | remove: "%" | remove: "." | strip }}></{{ include.id | url_encode | escape | remove: "%" | remove: "." | strip }}>
 
 </body>
 </html>

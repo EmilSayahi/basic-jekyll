@@ -5,6 +5,9 @@ tagline: "This is a test page"   #    Your site's tagline.
 url: "http://emilsayahi.github.io/basic-jekyll" # The base hostname & protocol for your site. Your URL.
 author: Alexis Métaireau   #   Your name.
 demo_mode: true  # Meant for use on the demo site only. Disable this.
+disqus: false
+disqus_short# - name: 'YourDisqusShortname'
+commento: false
 
 #Jekyll settings
 collections:

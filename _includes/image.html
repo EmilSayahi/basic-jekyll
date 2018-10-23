@@ -1,2 +1,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cssgram/0.1.10/cssgram.min.css">
+{% if include.link == nil %}
 <img class="{{ include.filter }}" src="{{ include.image }}" width="{{ include.width }}" height="{{ include.height }}" alt="{{ include.alt }}" >
+{% elsif include.link != nil %}
+<a href="{{ include.link }}">
+<img class="{{ include.filter }}" src="{{ include.image }}" width="{{ include.width }}" height="{{ include.height }}" alt="{{ include.alt }}" >
+</a>
+{% endif %}
